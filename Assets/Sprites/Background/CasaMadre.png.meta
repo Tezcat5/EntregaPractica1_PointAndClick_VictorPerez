@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c4b22ab91c034f44989313c503261dee
+guid: 939d59b481c7cd84887ef2c42d22ae77
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3200703383094890466
-    second: Madre_en_casa_HGSS_0
+      213: 175115619252936260
+    second: CasaMadre_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Madre_en_casa_HGSS_0
+      name: CasaMadre_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 192
+        width: 245
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ef03c4d4ce2b6c20800000000000000
-      internalID: 3200703383094890466
+      spriteID: 44e91385ab22e6200800000000000000
+      internalID: 175115619252936260
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Madre_en_casa_HGSS_0: 3200703383094890466
+      CasaMadre_0: 175115619252936260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
