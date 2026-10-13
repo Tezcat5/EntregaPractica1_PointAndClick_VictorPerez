@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 939d59b481c7cd84887ef2c42d22ae77
+guid: bcb4f888e7920ae4a9ae8f1c15d6afe8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 175115619252936260
-    second: CasaMadre_0
+      213: 744318517779491817
+    second: CasaMadre 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CasaMadre_0
+      name: CasaMadre 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44e91385ab22e6200800000000000000
-      internalID: 175115619252936260
+      spriteID: 9ebedf39fb9545a00800000000000000
+      internalID: 744318517779491817
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CasaMadre_0: 175115619252936260
+      CasaMadre 1_0: 744318517779491817
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
