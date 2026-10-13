@@ -256,6 +256,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22328323}
   m_CullTransparentMesh: 1
+--- !u!1 &170642852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 170642853}
+  - component: {fileID: 170642854}
+  - component: {fileID: 170642855}
+  m_Layer: 0
+  m_Name: Escaleras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &170642853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170642852}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.92, y: 2.137, z: 0}
+  m_LocalScale: {x: 1.2126, y: 0.5949886, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1193662618}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &170642854
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170642852}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.030183345, y: 0.54717565}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.3676903, y: 2.2956734}
+  m_EdgeRadius: 0
+--- !u!114 &170642855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170642852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c32c3c2825a4b44db0b10e90d265ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CambiarEscena
+  nombreEscena: Casa_Abajo
 --- !u!1 &244548597
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +359,7 @@ GameObject:
   - component: {fileID: 244548598}
   - component: {fileID: 244548599}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: Ordenador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1171,7 +1263,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 532501367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 770634941}
+        m_TargetAssemblyTypeName: GestorInteracciones, Assembly-CSharp
+        m_MethodName: SeleccionarMirar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &532501367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,7 +1611,7 @@ GameObject:
   - component: {fileID: 691259723}
   - component: {fileID: 691259724}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Tele
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1652,6 +1756,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 527288216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &770634940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770634942}
+  - component: {fileID: 770634941}
+  m_Layer: 0
+  m_Name: GestorInteracciones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &770634941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770634940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9c3c5da18408f488f49722723b11b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestorInteracciones
+  accionSeleccionada: MIRAR
+--- !u!4 &770634942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770634940}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.35819, y: -0.31009, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789804161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +1883,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 789804164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 770634941}
+        m_TargetAssemblyTypeName: GestorInteracciones, Assembly-CSharp
+        m_MethodName: SeleccionarHablar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &789804164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2097,7 +2258,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 985445274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 770634941}
+        m_TargetAssemblyTypeName: GestorInteracciones, Assembly-CSharp
+        m_MethodName: SeleccionarInteractuar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &985445274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2385,6 +2558,7 @@ Transform:
   - {fileID: 244548598}
   - {fileID: 1946826461}
   - {fileID: 1881228716}
+  - {fileID: 170642853}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524677264
@@ -2567,7 +2741,7 @@ Transform:
   m_GameObject: {fileID: 1712441743}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.84, z: 0}
+  m_LocalPosition: {x: 0, y: -5.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2834,7 +3008,7 @@ GameObject:
   - component: {fileID: 1881228716}
   - component: {fileID: 1881228717}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Cama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3051,7 +3225,7 @@ GameObject:
   - component: {fileID: 1946826461}
   - component: {fileID: 1946826462}
   m_Layer: 0
-  m_Name: GameObject (4)
+  m_Name: Wii
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3066,7 +3240,7 @@ Transform:
   m_GameObject: {fileID: 1946826460}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: 2.6599998, z: 0}
+  m_LocalPosition: {x: -4.26, y: 2.679, z: 0}
   m_LocalScale: {x: 0.73192716, y: 0.372379, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3130,3 +3304,4 @@ SceneRoots:
   - {fileID: 1193662618}
   - {fileID: 660818932}
   - {fileID: 1107792031}
+  - {fileID: 770634942}

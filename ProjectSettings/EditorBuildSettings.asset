@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Casa_Arriba.unity
+    guid: d0e797dd843334a4ca6f3e5413aa1f23
+  - enabled: 1
     path: Assets/Scenes/Casa_Abajo.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Pueblo.unity
+    guid: f746c94647146cb4ea5fdc55f58db62f
+  - enabled: 1
+    path: Assets/Scenes/Monlau_Exterior.unity
+    guid: 92ca00f89d55f9f4180b3a13a7aca27b
+  - enabled: 1
+    path: Assets/Scenes/Monlau_Recepcion.unity
+    guid: 533ee707cbd5a2640861c4a9f671b432
+  - enabled: 1
+    path: Assets/Scenes/Sala_Campeon.unity
+    guid: 115d724a4a154d1409b6eaa72046b7f1
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
