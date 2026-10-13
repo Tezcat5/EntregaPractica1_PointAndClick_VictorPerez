@@ -6,6 +6,9 @@ public class GestorInteracciones : MonoBehaviour
 
     public string accionSeleccionada = "MIRAR";
 
+    [HideInInspector]
+    public ObjetoInteractuable objetoObjetivo;
+
     void Awake()
     {
         Instancia = this;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjetoInteractuable : MonoBehaviour
 {
@@ -32,8 +33,7 @@ public class ObjetoInteractuable : MonoBehaviour
             case "INTERACTUAR":
                 if (!string.IsNullOrEmpty(escenaDestino))
                 {
-                    UnityEngine.SceneManagement.SceneManager
-                        .LoadScene(escenaDestino);
+                    SceneManager.LoadScene(escenaDestino);
                 }
                 else
                 {
@@ -45,6 +45,13 @@ public class ObjetoInteractuable : MonoBehaviour
 
     void MostrarTexto(string mensaje)
     {
-        Debug.Log(nombreObjeto + ": " + mensaje);
+        if (SistemaDialogo.Instancia != null)
+        {
+            SistemaDialogo.Instancia.MostrarTexto(mensaje);
+        }
+        else
+        {
+            Debug.LogWarning("No se encuentra SistemaDialogo en la escena.");
+        }
     }
 }

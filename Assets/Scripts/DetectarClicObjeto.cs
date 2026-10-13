@@ -8,12 +8,9 @@ public class DetectarClicObjeto : MonoBehaviour
         if (!Input.GetMouseButtonDown(0))
             return;
 
-        // Ignorar los clics sobre los botones y la interfaz.
         if (EventSystem.current != null &&
             EventSystem.current.IsPointerOverGameObject())
-        {
             return;
-        }
 
         if (Camera.main == null)
             return;
@@ -31,7 +28,8 @@ public class DetectarClicObjeto : MonoBehaviour
             golpe.collider.GetComponent<ObjetoInteractuable>();
 
         if (objeto == null)
-            objeto = golpe.collider.GetComponentInParent<ObjetoInteractuable>();
+            objeto = golpe.collider
+                .GetComponentInParent<ObjetoInteractuable>();
 
         if (objeto == null)
             return;
@@ -39,9 +37,12 @@ public class DetectarClicObjeto : MonoBehaviour
         if (GestorInteracciones.Instancia == null)
             return;
 
-        string accion =
-            GestorInteracciones.Instancia.accionSeleccionada;
+        GestorInteracciones.Instancia.objetoObjetivo = objeto;
 
-        objeto.Interactuar(accion);
+        Debug.Log(
+            "Objeto seleccionado: " + objeto.nombreObjeto +
+            ". Acción: " +
+            GestorInteracciones.Instancia.accionSeleccionada
+        );
     }
 }

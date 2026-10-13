@@ -4,9 +4,11 @@ using UnityEngine.EventSystems;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 3f;
+    public float distanciaInteraccion = 0.6f;
 
     private Vector3 targetPosition;
     private Rigidbody2D rb;
+    private ObjetoInteractuable objetoPendiente;
 
     void Start()
     {
@@ -16,48 +18,113 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!Input.GetMouseButtonDown(0))
+            return;
+
+        if (EventSystem.current != null &&
+            EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (Camera.main == null)
+            return;
+
+        Vector3 mousePosition =
+            Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector2 punto = new Vector2(mousePosition.x, mousePosition.y);
+        RaycastHit2D golpe = Physics2D.Raycast(punto, Vector2.zero);
+
+        if (golpe.collider != null)
         {
-            // Si pulsamos sobre la interfaz, no movemos al personaje
-            if (EventSystem.current != null &&
-                EventSystem.current.IsPointerOverGameObject())
+            ObjetoInteractuable objeto =
+                golpe.collider.GetComponent<ObjetoInteractuable>();
+
+            if (objeto == null)
+                objeto = golpe.collider
+                    .GetComponentInParent<ObjetoInteractuable>();
+
+            if (objeto != null &&
+                GestorInteracciones.Instancia != null)
             {
+                objetoPendiente = objeto;
+                targetPosition = ObtenerPuntoCercano(objeto);
                 return;
             }
-
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = transform.position.z;
-
-            targetPosition = mousePosition;
         }
+
+        // Clic en el suelo: caminar normalmente.
+        objetoPendiente = null;
+        mousePosition.z = transform.position.z;
+        targetPosition = mousePosition;
+    }
+
+    Vector3 ObtenerPuntoCercano(ObjetoInteractuable objeto)
+    {
+        Bounds bounds = objeto.GetComponent<Collider2D>().bounds;
+
+        Vector3 centro = bounds.center;
+        Vector3 jugador = transform.position;
+
+        // Acercarse desde el lado más cercano.
+        if (Mathf.Abs(jugador.x - centro.x) >
+            Mathf.Abs(jugador.y - centro.y))
+        {
+            centro.x = jugador.x < bounds.center.x
+                ? bounds.min.x - distanciaInteraccion
+                : bounds.max.x + distanciaInteraccion;
+        }
+        else
+        {
+            centro.y = jugador.y < bounds.center.y
+                ? bounds.min.y - distanciaInteraccion
+                : bounds.max.y + distanciaInteraccion;
+        }
+
+        centro.z = transform.position.z;
+        return centro;
     }
 
     void FixedUpdate()
     {
-        Vector2 currentPosition = rb.position;
-        Vector2 target = new Vector2(targetPosition.x, targetPosition.y);
+        if (rb == null)
+            return;
 
-        Vector2 newPosition;
+        Vector2 actual = rb.position;
+        Vector2 destino = new Vector2(targetPosition.x, targetPosition.y);
 
-        // Primero nos movemos horizontalmente
-        if (Mathf.Abs(target.x - currentPosition.x) > 0.05f)
+        Vector2 nuevo;
+
+        if (Mathf.Abs(destino.x - actual.x) > 0.05f)
         {
-            newPosition = Vector2.MoveTowards(
-                currentPosition,
-                new Vector2(target.x, currentPosition.y),
+            nuevo = Vector2.MoveTowards(
+                actual,
+                new Vector2(destino.x, actual.y),
                 speed * Time.fixedDeltaTime
             );
         }
-        // Después nos movemos verticalmente
         else
         {
-            newPosition = Vector2.MoveTowards(
-                currentPosition,
-                new Vector2(currentPosition.x, target.y),
+            nuevo = Vector2.MoveTowards(
+                actual,
+                new Vector2(actual.x, destino.y),
                 speed * Time.fixedDeltaTime
             );
         }
 
-        rb.MovePosition(newPosition);
+        rb.MovePosition(nuevo);
+
+        if (objetoPendiente != null &&
+            Vector2.Distance(rb.position, destino) < 0.12f)
+        {
+            if (GestorInteracciones.Instancia != null)
+            {
+                GestorInteracciones.Instancia.objetoObjetivo = null;
+                objetoPendiente.Interactuar(
+                    GestorInteracciones.Instancia.accionSeleccionada
+                );
+            }
+
+            objetoPendiente = null;
+        }
     }
 }
