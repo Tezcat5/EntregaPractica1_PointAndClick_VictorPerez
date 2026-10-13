@@ -6,7 +6,10 @@ public class SistemaDialogo : MonoBehaviour
 {
     public static SistemaDialogo Instancia;
 
+    [Header("Texto del diálogo")]
     public TMP_Text textoDialogo;
+
+    [Header("Velocidad de escritura")]
     public float velocidadEscritura = 0.035f;
 
     private Coroutine escrituraActual;
@@ -16,11 +19,29 @@ public class SistemaDialogo : MonoBehaviour
         Instancia = this;
     }
 
-    public void MostrarTexto(string mensaje)
+    void Start()
     {
         if (textoDialogo == null)
         {
-            Debug.LogWarning("Falta asignar Texto_Dialogo.");
+            Debug.LogError(
+                "SistemaDialogo: falta asignar Texto_Dialogo en el Inspector."
+            );
+            return;
+        }
+
+        textoDialogo.text = "";
+        Debug.Log("SistemaDialogo preparado correctamente.");
+    }
+
+    public void MostrarTexto(string mensaje)
+    {
+        Debug.Log("SistemaDialogo recibe: " + mensaje);
+
+        if (textoDialogo == null)
+        {
+            Debug.LogError(
+                "SistemaDialogo: Texto_Dialogo no está asignado."
+            );
             return;
         }
 

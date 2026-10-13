@@ -6,24 +6,36 @@ public class ObjetoInteractuable : MonoBehaviour
     [Header("Información del objeto")]
     public string nombreObjeto = "Objeto";
 
-    [TextArea]
-    public string textoMirar = "No ves nada especial.";
-
-    [TextArea]
-    public string textoHablar = "No parece que pueda responderte.";
-
-    [TextArea]
-    public string textoInteractuar = "No ocurre nada.";
+    [TextArea] public string textoMirar = "No ves nada especial.";
+    [TextArea] public string textoHablar = "No parece que pueda responderte.";
+    [TextArea] public string textoInteractuar = "No ocurre nada.";
 
     [Header("Cambio de escena")]
     public string escenaDestino = "";
 
+    [Header("Objeto con dos estados (opcional)")]
+    public GameObject objetoEstadoAlternativo;
+    public bool estadoAlternativoActivo = false;
+    [TextArea] public string textoMirarAlternativo = "";
+    [TextArea] public string textoInteractuarAlternativo = "";
+
+    // Solo los botones deberían llamar a este método.
     public void Interactuar(string accion)
     {
+        Debug.Log(
+            "🔴 Interactuar llamado en " + nombreObjeto +
+            ". Acción recibida: " + accion
+        );
+
         switch (accion)
         {
             case "MIRAR":
-                MostrarTexto(textoMirar);
+                MostrarTexto(
+                    estadoAlternativoActivo &&
+                    !string.IsNullOrEmpty(textoMirarAlternativo)
+                    ? textoMirarAlternativo
+                    : textoMirar
+                );
                 break;
 
             case "HABLAR":
@@ -34,6 +46,23 @@ public class ObjetoInteractuable : MonoBehaviour
                 if (!string.IsNullOrEmpty(escenaDestino))
                 {
                     SceneManager.LoadScene(escenaDestino);
+                    return;
+                }
+
+                if (objetoEstadoAlternativo != null)
+                {
+                    estadoAlternativoActivo = !estadoAlternativoActivo;
+
+                    objetoEstadoAlternativo.SetActive(
+                        estadoAlternativoActivo
+                    );
+
+                    MostrarTexto(
+                        estadoAlternativoActivo &&
+                        !string.IsNullOrEmpty(textoInteractuarAlternativo)
+                        ? textoInteractuarAlternativo
+                        : textoInteractuar
+                    );
                 }
                 else
                 {
@@ -43,7 +72,7 @@ public class ObjetoInteractuable : MonoBehaviour
         }
     }
 
-    void MostrarTexto(string mensaje)
+    private void MostrarTexto(string mensaje)
     {
         if (SistemaDialogo.Instancia != null)
         {
@@ -51,7 +80,9 @@ public class ObjetoInteractuable : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No se encuentra SistemaDialogo en la escena.");
+            Debug.LogWarning(
+                "No se encuentra SistemaDialogo en la escena."
+            );
         }
     }
 }
