@@ -1,34 +1,43 @@
 fileFormatVersion: 2
-guid: fe945bf76e0db9246bc8abc5bf878d68
+guid: c8fa1d8883a229b458ae77bd18b69c2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2899633708621833534
-    second: Prota_Unity_0
+      213: 3694176719185088143
+    second: Yo_0
   - first:
-      213: -3438531319074907902
-    second: Prota_Unity_1
+      213: -7833598954835568792
+    second: Yo_1
   - first:
-      213: 2025828262255486105
-    second: Prota_Unity_2
+      213: -6343388981068375867
+    second: Yo_2
   - first:
-      213: 8021648463977538129
-    second: Prota_Unity_3
+      213: 91699181984405355
+    second: Yo_3
   - first:
-      213: 8717328455945482377
-    second: Prota_Unity_4
+      213: -7649422578214435651
+    second: Yo_4
   - first:
-      213: -4664680796553227435
-    second: Prota_Unity_5
+      213: -3453734520150459990
+    second: Yo_5
   - first:
-      213: -4969476784766814941
-    second: Prota_Unity_6
+      213: -165723620856869232
+    second: Yo_6
   - first:
-      213: -8264349974118345833
-    second: Prota_Unity_7
+      213: -8624379542843678715
+    second: Yo_7
   - first:
-      213: -213590786420919754
-    second: Prota_Unity_8
+      213: -5902006473591104612
+    second: Yo_8
+  - first:
+      213: -1493471733591045496
+    second: Yo_9
+  - first:
+      213: -5131093359528079622
+    second: Yo_10
+  - first:
+      213: 4164008774379500647
+    second: Yo_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Prota_Unity_0
+      name: Yo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 404
-        width: 156
-        height: 205
+        x: 91
+        y: 127
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e35272dbe719d3820800000000000000
-      internalID: 2899633708621833534
+      spriteID: f8e8b8c472a544330800000000000000
+      internalID: 3694176719185088143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prota_Unity_1
+      name: Yo_1
       rect:
         serializedVersion: 2
-        x: 173
-        y: 412
-        width: 158
-        height: 190
+        x: 124
+        y: 127
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2091c71cbf1e740d0800000000000000
-      internalID: -3438531319074907902
+      spriteID: 86797283147794390800000000000000
+      internalID: -7833598954835568792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prota_Unity_2
+      name: Yo_2
       rect:
         serializedVersion: 2
-        x: 348
-        y: 404
-        width: 156
-        height: 205
+        x: 157
+        y: 127
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9946fab32103d1c10800000000000000
-      internalID: 2025828262255486105
+      spriteID: 5c8da479451c7f7a0800000000000000
+      internalID: -6343388981068375867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prota_Unity_3
+      name: Yo_3
       rect:
         serializedVersion: 2
-        x: 7
-        y: 213
-        width: 141
-        height: 183
+        x: 91
+        y: 94
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 152607807ce925f60800000000000000
-      internalID: 8021648463977538129
+      spriteID: b67df509be7c54100800000000000000
+      internalID: 91699181984405355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prota_Unity_4
+      name: Yo_4
       rect:
         serializedVersion: 2
-        x: 181
-        y: 213
-        width: 142
-        height: 183
+        x: 124
+        y: 94
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 980f8075b0c2af870800000000000000
-      internalID: 8717328455945482377
+      spriteID: db40da881bac7d590800000000000000
+      internalID: -7649422578214435651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prota_Unity_5
+      name: Yo_5
       rect:
         serializedVersion: 2
-        x: 356
-        y: 218
-        width: 141
-        height: 174
+        x: 157
+        y: 94
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 553dbd2b789b34fb0800000000000000
-      internalID: -4664680796553227435
+      spriteID: aa97de9a0ced110d0800000000000000
+      internalID: -3453734520150459990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prota_Unity_6
+      name: Yo_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 156
-        height: 205
+        x: 92
+        y: 62
+        width: 23
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +295,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3257c64913fd80bb0800000000000000
-      internalID: -4969476784766814941
+      spriteID: 09e4fefae3b33bdf0800000000000000
+      internalID: -165723620856869232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prota_Unity_7
+      name: Yo_7
       rect:
         serializedVersion: 2
-        x: 173
-        y: 7
-        width: 158
-        height: 190
+        x: 125
+        y: 62
+        width: 23
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,20 +317,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 793da252c712f4d80800000000000000
-      internalID: -8264349974118345833
+      spriteID: 50028acef7c005880800000000000000
+      internalID: -8624379542843678715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prota_Unity_8
+      name: Yo_8
       rect:
         serializedVersion: 2
-        x: 348
-        y: 0
-        width: 156
-        height: 205
+        x: 158
+        y: 62
+        width: 23
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,8 +339,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 632b518bf4c290df0800000000000000
-      internalID: -213590786420919754
+      spriteID: c9bdb87e16cd71ea0800000000000000
+      internalID: -5902006473591104612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yo_9
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 28
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a083dfe5f164be0800000000000000
+      internalID: -1493471733591045496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yo_10
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 28
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe86f376c1bac8b0800000000000000
+      internalID: -5131093359528079622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yo_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 28
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764ff7e1be789c930800000000000000
+      internalID: 4164008774379500647
       vertices: []
       indices: 
       edges: []
@@ -350,15 +425,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Prota_Unity_0: 2899633708621833534
-      Prota_Unity_1: -3438531319074907902
-      Prota_Unity_2: 2025828262255486105
-      Prota_Unity_3: 8021648463977538129
-      Prota_Unity_4: 8717328455945482377
-      Prota_Unity_5: -4664680796553227435
-      Prota_Unity_6: -4969476784766814941
-      Prota_Unity_7: -8264349974118345833
-      Prota_Unity_8: -213590786420919754
+      Yo_0: 3694176719185088143
+      Yo_1: -7833598954835568792
+      Yo_10: -5131093359528079622
+      Yo_11: 4164008774379500647
+      Yo_2: -6343388981068375867
+      Yo_3: 91699181984405355
+      Yo_4: -7649422578214435651
+      Yo_5: -3453734520150459990
+      Yo_6: -165723620856869232
+      Yo_7: -8624379542843678715
+      Yo_8: -5902006473591104612
+      Yo_9: -1493471733591045496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
