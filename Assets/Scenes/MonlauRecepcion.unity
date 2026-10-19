@@ -3488,7 +3488,7 @@ MonoBehaviour:
   nombreObjeto: Recepcion
   textoMirar: 'YO: Es la recepcionista de Monlau.'
   textoHablar: "RECEPCIONISTA: \xBFVienes a por el Campe\xF3n? Mu\xE9strame tu acreditaci\xF3n... \xA1Perfecto! Te abro el paso a la Sala del Campe\xF3n."
-  textoInteractuar: No ocurre nada.
+  textoInteractuar: 'YO: Mejor hablo con ella para informarme.'
   escenaDestino: 
   requiereLlave: 0
   textoSinLlave: "La puerta est\xE1 cerrada. Deber\xEDa hablar con Mam\xE1 primero."
