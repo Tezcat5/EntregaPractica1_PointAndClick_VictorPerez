@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
-    private string ultimaDireccion = "Down";
+    // Guardamos la última dirección en coordenadas Vector2 (por defecto mirando hacia abajo)
+    private Vector2 ultimaDireccion = Vector2.down;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        ActualizarAnimacionQuieto();
+        ActualizarAnimacion();
     }
 
     void Update()
@@ -41,16 +42,7 @@ public class PlayerMovement : MonoBehaviour
         if (rb == null || animator == null)
             return;
 
-        bool moviendose =
-            Vector2.Distance(rb.position, new Vector2(
-                targetPosition.x, targetPosition.y)) > 0.05f;
-
-        animator.SetBool("Moviendose", moviendose);
-
-        if (!moviendose)
-        {
-            ActualizarAnimacionQuieto();
-        }
+        ActualizarAnimacion();
     }
 
     void FixedUpdate()
@@ -59,8 +51,7 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         Vector2 actual = rb.position;
-        Vector2 destino = new Vector2(
-            targetPosition.x, targetPosition.y);
+        Vector2 destino = new Vector2(targetPosition.x, targetPosition.y);
 
         Vector2 diferencia = destino - actual;
         Vector2 nuevo = actual;
@@ -72,7 +63,8 @@ public class PlayerMovement : MonoBehaviour
                 new Vector2(destino.x, actual.y),
                 speed * Time.fixedDeltaTime);
 
-            ultimaDireccion = diferencia.x < 0 ? "Left" : "Right";
+            // Guardamos la dirección en X (1 para derecha, -1 para izquierda)
+            ultimaDireccion = diferencia.x < 0 ? Vector2.left : Vector2.right;
         }
         else if (Mathf.Abs(diferencia.y) > 0.05f)
         {
@@ -81,19 +73,34 @@ public class PlayerMovement : MonoBehaviour
                 new Vector2(actual.x, destino.y),
                 speed * Time.fixedDeltaTime);
 
-            ultimaDireccion = diferencia.y > 0 ? "Up" : "Down";
+            // Guardamos la dirección en Y (1 para arriba, -1 para abajo)
+            ultimaDireccion = diferencia.y > 0 ? Vector2.up : Vector2.down;
         }
 
         rb.MovePosition(nuevo);
     }
 
-    void ActualizarAnimacionQuieto()
+    void ActualizarAnimacion()
     {
-        if (animator == null)
+        if (animator == null || rb == null)
             return;
 
-        animator.SetBool("MirandoArriba", ultimaDireccion == "Up");
-        animator.SetBool("MirandoIzquierda", ultimaDireccion == "Left");
-        animator.SetBool("MirandoDerecha", ultimaDireccion == "Right");
+        // Comprobamos si se está moviendo
+        bool moviendose = Vector2.Distance(rb.position, new Vector2(targetPosition.x, targetPosition.y)) > 0.05f;
+
+        animator.SetBool("Moviendose", moviendose);
+
+        if (moviendose)
+        {
+            // Mientras camina, enviamos la dirección hacia la que avanza
+            animator.SetFloat("MoveX", ultimaDireccion.x);
+            animator.SetFloat("MoveY", ultimaDireccion.y);
+        }
+        else
+        {
+            // Al pararse, mantiene la última dirección para el Blend Tree de Idle
+            animator.SetFloat("MoveX", ultimaDireccion.x);
+            animator.SetFloat("MoveY", ultimaDireccion.y);
+        }
     }
 }
