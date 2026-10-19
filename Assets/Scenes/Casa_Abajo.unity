@@ -177,11 +177,16 @@ MonoBehaviour:
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 1
   textoSinHablarConMadre: "YO: Deber\xEDa ir a hablar con mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
   entregaObjetoAlInteractuar: 0
@@ -262,6 +267,7 @@ GameObject:
   - component: {fileID: 111246741}
   - component: {fileID: 111246740}
   - component: {fileID: 111246739}
+  - component: {fileID: 111246742}
   m_Layer: 5
   m_Name: Button_Mochila
   m_TagString: Untagged
@@ -383,6 +389,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111246737}
   m_CullTransparentMesh: 1
+--- !u!114 &111246742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111246737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd37ea431a4d14418a1fab42eb84eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorSonidoBotones
+  sonidoClic: {fileID: 8300000, guid: 582a3cb8c51522642a4b9842b4abb8ac, type: 3}
 --- !u!1 &303006966
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,11 +494,16 @@ MonoBehaviour:
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
   entregaObjetoAlInteractuar: 0
@@ -759,6 +783,7 @@ GameObject:
   - component: {fileID: 440783654}
   - component: {fileID: 440783653}
   - component: {fileID: 440783652}
+  - component: {fileID: 440783655}
   m_Layer: 5
   m_Name: Button_Interactuar
   m_TagString: Untagged
@@ -880,6 +905,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440783650}
   m_CullTransparentMesh: 1
+--- !u!114 &440783655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440783650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd37ea431a4d14418a1fab42eb84eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorSonidoBotones
+  sonidoClic: {fileID: 8300000, guid: 582a3cb8c51522642a4b9842b4abb8ac, type: 3}
 --- !u!1 &442397539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,11 +1484,16 @@ MonoBehaviour:
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 1
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: A ver esa carta. \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en tu cama."
   textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
   entregaObjetoAlInteractuar: 0
@@ -1718,11 +1761,16 @@ MonoBehaviour:
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
   entregaObjetoAlInteractuar: 0
@@ -2586,11 +2634,16 @@ MonoBehaviour:
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
   entregaObjetoAlInteractuar: 0
@@ -2703,11 +2756,16 @@ MonoBehaviour:
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
   entregaObjetoAlInteractuar: 0
@@ -2812,6 +2870,7 @@ GameObject:
   - component: {fileID: 1434010905}
   - component: {fileID: 1434010904}
   - component: {fileID: 1434010903}
+  - component: {fileID: 1434010906}
   m_Layer: 5
   m_Name: Button_Hablar
   m_TagString: Untagged
@@ -2933,6 +2992,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434010901}
   m_CullTransparentMesh: 1
+--- !u!114 &1434010906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434010901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd37ea431a4d14418a1fab42eb84eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorSonidoBotones
+  sonidoClic: {fileID: 8300000, guid: 582a3cb8c51522642a4b9842b4abb8ac, type: 3}
 --- !u!1 &1456529164
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +3866,7 @@ GameObject:
   - component: {fileID: 1769466157}
   - component: {fileID: 1769466156}
   - component: {fileID: 1769466155}
+  - component: {fileID: 1769466158}
   m_Layer: 5
   m_Name: Button_Mirar
   m_TagString: Untagged
@@ -3915,6 +3988,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769466153}
   m_CullTransparentMesh: 1
+--- !u!114 &1769466158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769466153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd37ea431a4d14418a1fab42eb84eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorSonidoBotones
+  sonidoClic: {fileID: 8300000, guid: 582a3cb8c51522642a4b9842b4abb8ac, type: 3}
 --- !u!1 &1849538480
 GameObject:
   m_ObjectHideFlags: 0

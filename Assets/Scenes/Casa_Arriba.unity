@@ -245,6 +245,7 @@ MonoBehaviour:
   nombreObjetoAEntregarMadre: Llaves de la Casa
   esElGuardia: 0
   textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver!... \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! \xA1Qu\xE9 suerte! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en el ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: \xA1Much\xEDsima suerte en tu viaje, cari\xF1o! Recuerda coger la tarjeta del bus que est\xE1 al lado del ordenador en tu cuarto."
   entregaObjetoAlInteractuar: 0
@@ -503,6 +504,7 @@ MonoBehaviour:
   nombreObjetoAEntregarMadre: Llaves de la Casa
   esElGuardia: 0
   textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver!... \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! \xA1Qu\xE9 suerte! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en el ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: \xA1Much\xEDsima suerte en tu viaje, cari\xF1o! Recuerda coger la tarjeta del bus que est\xE1 al lado del ordenador en tu cuarto."
   entregaObjetoAlInteractuar: 0
@@ -1435,6 +1437,7 @@ MonoBehaviour:
   nombreObjetoAEntregarMadre: Llaves de la Casa
   esElGuardia: 0
   textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver!... \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! \xA1Qu\xE9 suerte! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en el ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: \xA1Much\xEDsima suerte en tu viaje, cari\xF1o! Recuerda coger la tarjeta del bus que est\xE1 al lado del ordenador en tu cuarto."
   entregaObjetoAlInteractuar: 0
@@ -2885,6 +2888,8 @@ MonoBehaviour:
   musicaMonlauRecepcion: {fileID: 8300000, guid: c5ae92a703b05b4439b79add99cfcef6, type: 3}
   musicaSalaCampeon: {fileID: 8300000, guid: c5ae92a703b05b4439b79add99cfcef6, type: 3}
   musicaCombateJavier: {fileID: 8300000, guid: 41523daf349f39e42ac1257d0c71b157, type: 3}
+  musicaVictoria: {fileID: 8300000, guid: b5e1c340da2a8c04fbfe858cbc38958b, type: 3}
+  musicaDerrota: {fileID: 8300000, guid: 4251203a87dde0c4c970daae1f50497c, type: 3}
 --- !u!1 &1688873835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3771,6 +3776,7 @@ MonoBehaviour:
   nombreObjetoAEntregarMadre: Llaves de la Casa
   esElGuardia: 0
   textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver!... \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! \xA1Qu\xE9 suerte! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en el ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: \xA1Much\xEDsima suerte en tu viaje, cari\xF1o! Recuerda coger la tarjeta del bus que est\xE1 al lado del ordenador en tu cuarto."
   entregaObjetoAlInteractuar: 1
@@ -3892,6 +3898,7 @@ MonoBehaviour:
   nombreObjetoAEntregarMadre: Llaves de la Casa
   esElGuardia: 0
   textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver!... \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! \xA1Qu\xE9 suerte! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en el ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: \xA1Much\xEDsima suerte en tu viaje, cari\xF1o! Recuerda coger la tarjeta del bus que est\xE1 al lado del ordenador en tu cuarto."
   entregaObjetoAlInteractuar: 0

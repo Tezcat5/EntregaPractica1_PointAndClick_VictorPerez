@@ -43,6 +43,10 @@ public class ObjetoInteractuable : MonoBehaviour
     public bool esElGuardia = false;
     [TextArea] public string textoGuardiaAutorizado = "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campeón.";
 
+    [Header("Lógica del Profesor Javier (Combate Final)")]
+    public bool esElProfesorJavier = false;
+    private static bool javierHablado = false; // Controla si ya le has hablado para desbloquear el combate
+
     // VARIABLES DE ESTADO (ESTÁTICAS)
     public static bool tieneLlaveDeCasa = false;
     public static bool cartaYaRecogida = false;
@@ -75,6 +79,7 @@ public class ObjetoInteractuable : MonoBehaviour
         cartaYaRecogida = false;
         madreSabeDeLaCarta = false;
         guardiaPermitePaso = false;
+        javierHablado = false;
         puntoEntradaDestino = "";
         Debug.Log("🔄 Progreso de la partida reiniciado para la prueba.");
     }
@@ -133,6 +138,12 @@ public class ObjetoInteractuable : MonoBehaviour
                         MostrarTexto(textoGuardiaAutorizado); // Recordatorio de que puedes pasar
                     }
                 }
+                else if (esElProfesorJavier)
+                {
+                    // Al hablarle por primera vez, marcamos que ya le hemos hablado y mostramos su diálogo
+                    javierHablado = true;
+                    MostrarTexto(textoHablar);
+                }
                 else
                 {
                     MostrarTexto(textoHablar);
@@ -140,6 +151,30 @@ public class ObjetoInteractuable : MonoBehaviour
                 break;
 
             case "INTERACTUAR":
+                // Si es el profesor Javier y ya le hemos hablado previamente, lanzamos el combate al interactuar
+                if (esElProfesorJavier)
+                {
+                    if (!javierHablado)
+                    {
+                        MostrarTexto("YO: Debería hablar con él antes de retarle.");
+                        return;
+                    }
+
+                    MostrarTexto(textoInteractuar); // Muestra el texto de aceptar el reto
+
+                    // Activa la secuencia de transición "VS" y salto al combate
+                    GestorInicioCombate gestorCombate = FindFirstObjectByType<GestorInicioCombate>();
+                    if (gestorCombate != null)
+                    {
+                        gestorCombate.IniciarSecuenciaTransicion();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("No se encontró el GestorInicioCombate en la escena.");
+                    }
+                    return;
+                }
+
                 // 1. Recoger objetos (Cama, Buzón, etc.)
                 if (entregaObjetoAlInteractuar)
                 {

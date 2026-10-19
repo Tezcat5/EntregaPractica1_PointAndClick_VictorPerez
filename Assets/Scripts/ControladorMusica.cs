@@ -17,6 +17,8 @@ public class ControladorMusica : MonoBehaviour
     public AudioClip musicaMonlauRecepcion;  // MonlauRecepcion (Interior)
     public AudioClip musicaSalaCampeon;      // Sala_Campeon (Ambiente previo)
     public AudioClip musicaCombateJavier;    // Música exclusiva para el Combate contra Javier
+    public AudioClip musicaVictoria;         // Escena_Victoria
+    public AudioClip musicaDerrota;          // Escena_Derrota
 
     void Awake()
     {
@@ -56,7 +58,7 @@ public class ControladorMusica : MonoBehaviour
         {
             nuevaMusica = musicaMenuPrincipal;
         }
-        // 2. Intros y Escena de Nota (Separadas individualmente)
+        // 2. Intros y Escena de Nota
         else if (nombreEscena == "Intro_1")
         {
             nuevaMusica = musicaIntro1;
@@ -86,13 +88,23 @@ public class ControladorMusica : MonoBehaviour
         }
         // 6. Monlau Recepción (Interior)
         else if (nombreEscena == "MonlauRecepcion")
-        {
+            {
             nuevaMusica = musicaMonlauRecepcion;
         }
         // 7. Sala del Campeón (Antes de luchar)
         else if (nombreEscena == "Sala_Campeon")
         {
             nuevaMusica = musicaSalaCampeon;
+        }
+        // 8. Pantalla de Victoria
+        else if (nombreEscena == "Escena_Victoria")
+        {
+            nuevaMusica = musicaVictoria;
+        }
+        // 9. Pantalla de Derrota
+        else if (nombreEscena == "Escena_Derrota")
+        {
+            nuevaMusica = musicaDerrota;
         }
 
         // Si se asigna una pista (o se deja vacía intencionadamente para silencio), gestiona el audio

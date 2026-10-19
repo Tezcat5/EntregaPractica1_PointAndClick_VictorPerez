@@ -328,11 +328,16 @@ MonoBehaviour:
   textoSinCarta: "YO: Antes debo revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Primero deber\xEDa ense\xF1arle la carta a Mam\xE1."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: 'YO: Necesito la Tarjeta del Bus para subir.'
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver!... \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! \xA1Qu\xE9 suerte! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en el ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: \xA1Much\xEDsima suerte en tu viaje, cari\xF1o! Recuerda coger la tarjeta del bus que est\xE1 al lado del ordenador en tu cuarto."
   entregaObjetoAlInteractuar: 0
@@ -445,11 +450,16 @@ MonoBehaviour:
   textoSinCarta: "YO: Antes debo revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Primero deber\xEDa ense\xF1arle la carta a Mam\xE1."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: 'YO: Necesito la Tarjeta del Bus para subir.'
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver!... \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! \xA1Qu\xE9 suerte! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en el ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: \xA1Much\xEDsima suerte en tu viaje, cari\xF1o! Recuerda coger la tarjeta del bus que est\xE1 al lado del ordenador en tu cuarto."
   entregaObjetoAlInteractuar: 0
@@ -562,11 +572,16 @@ MonoBehaviour:
   textoSinCarta: "YO: Antes debo revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Primero deber\xEDa ense\xF1arle la carta a Mam\xE1."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: 'YO: Necesito la Tarjeta del Bus para subir.'
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver!... \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! \xA1Qu\xE9 suerte! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en el ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: \xA1Much\xEDsima suerte en tu viaje, cari\xF1o! Recuerda coger la tarjeta del bus que est\xE1 al lado del ordenador en tu cuarto."
   entregaObjetoAlInteractuar: 0
@@ -757,11 +772,16 @@ MonoBehaviour:
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
   requiereHablarConMadrePostCarta: 0
   textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereHablarConGuardia: 0
+  textoSinHablarConGuardia: "YO: El guardia de la puerta me bloquea el paso. Deber\xEDa hablar con \xE9l."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para viajar. Mam\xE1 me dijo que est\xE1 en mi cuarto, al lado del ordenador."
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
+  esElGuardia: 0
+  textoGuardiaAutorizado: "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campe\xF3n."
+  esElProfesorJavier: 0
   textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
   textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
   entregaObjetoAlInteractuar: 0
@@ -933,6 +953,7 @@ GameObject:
   - component: {fileID: 470480943}
   - component: {fileID: 470480942}
   - component: {fileID: 470480941}
+  - component: {fileID: 470480944}
   m_Layer: 5
   m_Name: Button_Hablar
   m_TagString: Untagged
@@ -1054,6 +1075,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470480939}
   m_CullTransparentMesh: 1
+--- !u!114 &470480944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470480939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd37ea431a4d14418a1fab42eb84eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorSonidoBotones
+  sonidoClic: {fileID: 8300000, guid: 582a3cb8c51522642a4b9842b4abb8ac, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1726,7 @@ GameObject:
   - component: {fileID: 752065956}
   - component: {fileID: 752065955}
   - component: {fileID: 752065954}
+  - component: {fileID: 752065957}
   m_Layer: 5
   m_Name: Button_Mirar
   m_TagString: Untagged
@@ -1813,6 +1848,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752065952}
   m_CullTransparentMesh: 1
+--- !u!114 &752065957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752065952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd37ea431a4d14418a1fab42eb84eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorSonidoBotones
+  sonidoClic: {fileID: 8300000, guid: 582a3cb8c51522642a4b9842b4abb8ac, type: 3}
 --- !u!1 &790855262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,6 +2425,7 @@ GameObject:
   - component: {fileID: 985319342}
   - component: {fileID: 985319341}
   - component: {fileID: 985319340}
+  - component: {fileID: 985319343}
   m_Layer: 5
   m_Name: Button_Mochila
   m_TagString: Untagged
@@ -2498,6 +2547,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985319338}
   m_CullTransparentMesh: 1
+--- !u!114 &985319343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985319338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd37ea431a4d14418a1fab42eb84eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorSonidoBotones
+  sonidoClic: {fileID: 8300000, guid: 582a3cb8c51522642a4b9842b4abb8ac, type: 3}
 --- !u!1 &1141158234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,6 +2572,7 @@ GameObject:
   - component: {fileID: 1141158238}
   - component: {fileID: 1141158237}
   - component: {fileID: 1141158236}
+  - component: {fileID: 1141158239}
   m_Layer: 5
   m_Name: Button_Interactuar
   m_TagString: Untagged
@@ -2631,6 +2694,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141158234}
   m_CullTransparentMesh: 1
+--- !u!114 &1141158239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141158234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd37ea431a4d14418a1fab42eb84eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorSonidoBotones
+  sonidoClic: {fileID: 8300000, guid: 582a3cb8c51522642a4b9842b4abb8ac, type: 3}
 --- !u!1 &1304197932
 GameObject:
   m_ObjectHideFlags: 0
