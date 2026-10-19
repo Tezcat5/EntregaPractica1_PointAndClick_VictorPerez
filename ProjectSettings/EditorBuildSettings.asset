@@ -28,13 +28,13 @@ EditorBuildSettings:
     guid: f746c94647146cb4ea5fdc55f58db62f
   - enabled: 1
     path: Assets/Scenes/Monlau_Exterior.unity
-    guid: 92ca00f89d55f9f4180b3a13a7aca27b
+    guid: c6d9a20264e8db041a7618809037eb05
   - enabled: 1
-    path: Assets/Scenes/Monlau_Recepcion.unity
-    guid: 533ee707cbd5a2640861c4a9f671b432
+    path: Assets/Scenes/MonlauRecepcion.unity
+    guid: b6e1f246f95ff924aaa16ded79a791cf
   - enabled: 1
     path: Assets/Scenes/Sala_Campeon.unity
-    guid: 115d724a4a154d1409b6eaa72046b7f1
+    guid: bad9d76524e2d8647be9d7394e6d7408
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

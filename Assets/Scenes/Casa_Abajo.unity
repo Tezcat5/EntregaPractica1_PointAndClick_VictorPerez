@@ -172,9 +172,21 @@ MonoBehaviour:
   escenaDestino: Casa_Arriba
   requiereLlave: 0
   textoSinLlave: "La puerta est\xE1 cerrada. Deber\xEDa hablar con Mam\xE1 primero."
+  nombrePuntoEntrada: EntradaHabitacion
+  requiereCartaParaEntrar: 0
+  textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
+  requiereHablarConMadrePostCarta: 1
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a hablar con mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereTarjetaBus: 0
+  nombreTarjetaBus: Tarjeta del Bus
+  textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
+  nombreObjetoAEntregarMadre: Llaves de la Casa
+  textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
+  textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
+  entregaObjetoAlInteractuar: 0
   nombreObjetoAEntregar: Llaves de la Casa
-  textoHablarRepetido: "MAM\xC1: Recuerda mirar el buz\xF3n fuera antes de irte."
+  textoYaEntregado: "El buz\xF3n est\xE1 vac\xEDo. Ya cog\xED la carta."
   objetoEstadoAlternativo: {fileID: 0}
   estadoAlternativoActivo: 0
   textoMirarAlternativo: 
@@ -458,9 +470,21 @@ MonoBehaviour:
   escenaDestino: 
   requiereLlave: 0
   textoSinLlave: "La puerta est\xE1 cerrada. Deber\xEDa hablar con Mam\xE1 primero."
+  nombrePuntoEntrada: 
+  requiereCartaParaEntrar: 0
+  textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereTarjetaBus: 0
+  nombreTarjetaBus: Tarjeta del Bus
+  textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
+  nombreObjetoAEntregarMadre: Llaves de la Casa
+  textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
+  textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
+  entregaObjetoAlInteractuar: 0
   nombreObjetoAEntregar: Llaves de la Casa
-  textoHablarRepetido: "MAM\xC1: Recuerda mirar el buz\xF3n fuera antes de irte."
+  textoYaEntregado: "El buz\xF3n est\xE1 vac\xEDo. Ya cog\xED la carta."
   objetoEstadoAlternativo: {fileID: 0}
   estadoAlternativoActivo: 0
   textoMirarAlternativo: 
@@ -1417,9 +1441,21 @@ MonoBehaviour:
   escenaDestino: 
   requiereLlave: 0
   textoSinLlave: 
+  nombrePuntoEntrada: 
+  requiereCartaParaEntrar: 0
+  textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereTarjetaBus: 0
+  nombreTarjetaBus: Tarjeta del Bus
+  textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 1
+  nombreObjetoAEntregarMadre: Llaves de la Casa
+  textoMadreDespuesDeCarta: "MAM\xC1: A ver esa carta. \xA1Ooh, debes ir a Monlau a enfrentarte al campe\xF3n! Much\xEDsima suerte, cari\xF1o. Coge la tarjeta del bus de tu cuarto, est\xE1 en tu cama."
+  textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
+  entregaObjetoAlInteractuar: 0
   nombreObjetoAEntregar: Llaves de la Casa
-  textoHablarRepetido: "MAM\xC1: Recuerda mirar el buz\xF3n fuera antes de irte."
+  textoYaEntregado: "El buz\xF3n est\xE1 vac\xEDo. Ya cog\xED la carta."
   objetoEstadoAlternativo: {fileID: 0}
   estadoAlternativoActivo: 0
   textoMirarAlternativo: 
@@ -1677,9 +1713,21 @@ MonoBehaviour:
   escenaDestino: Pueblo
   requiereLlave: 1
   textoSinLlave: "YO: La puerta est\xE1 cerrada. Deber\xEDa hablar con mam\xE1 primero."
+  nombrePuntoEntrada: SalidaCasa
+  requiereCartaParaEntrar: 0
+  textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereTarjetaBus: 0
+  nombreTarjetaBus: Tarjeta del Bus
+  textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
+  nombreObjetoAEntregarMadre: Llaves de la Casa
+  textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
+  textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
+  entregaObjetoAlInteractuar: 0
   nombreObjetoAEntregar: Llaves de la Casa
-  textoHablarRepetido: "MAM\xC1: Recuerda mirar el buz\xF3n fuera antes de irte."
+  textoYaEntregado: "El buz\xF3n est\xE1 vac\xEDo. Ya cog\xED la carta."
   objetoEstadoAlternativo: {fileID: 0}
   estadoAlternativoActivo: 0
   textoMirarAlternativo: 
@@ -2436,6 +2484,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142569050}
   m_CullTransparentMesh: 1
+--- !u!1 &1143742762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1143742764}
+  - component: {fileID: 1143742763}
+  m_Layer: 0
+  m_Name: Punto_PuertaEntrada
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1143742763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143742762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45954deca6f8a14ab4c49d81e836f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuntoEntradaJugador
+  nombrePunto: PuertaEntrada
+--- !u!4 &1143742764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143742762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05, y: -2.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205522885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,9 +2581,21 @@ MonoBehaviour:
   escenaDestino: 
   requiereLlave: 0
   textoSinLlave: "La puerta est\xE1 cerrada. Deber\xEDa hablar con Mam\xE1 primero."
+  nombrePuntoEntrada: 
+  requiereCartaParaEntrar: 0
+  textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereTarjetaBus: 0
+  nombreTarjetaBus: Tarjeta del Bus
+  textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
+  nombreObjetoAEntregarMadre: Llaves de la Casa
+  textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
+  textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
+  entregaObjetoAlInteractuar: 0
   nombreObjetoAEntregar: Llaves de la Casa
-  textoHablarRepetido: "MAM\xC1: Recuerda mirar el buz\xF3n fuera antes de irte."
+  textoYaEntregado: "El buz\xF3n est\xE1 vac\xEDo. Ya cog\xED la carta."
   objetoEstadoAlternativo: {fileID: 971221888}
   estadoAlternativoActivo: 0
   textoMirarAlternativo: "YO: El fuego est\xE1 encendido. Como me despiste, hoy la cena acaba siendo carb\xF3n."
@@ -2593,9 +2698,21 @@ MonoBehaviour:
   escenaDestino: 
   requiereLlave: 0
   textoSinLlave: "La puerta est\xE1 cerrada. Deber\xEDa hablar con Mam\xE1 primero."
+  nombrePuntoEntrada: 
+  requiereCartaParaEntrar: 0
+  textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
+  requiereTarjetaBus: 0
+  nombreTarjetaBus: Tarjeta del Bus
+  textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para subir al autob\xFAs. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
+  nombreObjetoAEntregarMadre: Llaves de la Casa
+  textoMadreDespuesDeCarta: "MAM\xC1: \xA1A ver qu\xE9 pone en la carta!... \xA1Ooh, se ve que debes ir a Monlau para enfrentarte al campe\xF3n Pok\xE9mon! Pues much\xEDsima suerte cari\xF1o. Recuerda pillar la tarjeta del bus que est\xE1 en tu cuarto, al lado del ordenador."
+  textoMadreRecordatorioTarjeta: "MAM\xC1: Recuerda coger la tarjeta del bus de tu habitaci\xF3n antes de marcharte."
+  entregaObjetoAlInteractuar: 0
   nombreObjetoAEntregar: Llaves de la Casa
-  textoHablarRepetido: "MAM\xC1: Recuerda mirar el buz\xF3n fuera antes de irte."
+  textoYaEntregado: "El buz\xF3n est\xE1 vac\xEDo. Ya cog\xED la carta."
   objetoEstadoAlternativo: {fileID: 1909668671}
   estadoAlternativoActivo: 0
   textoMirarAlternativo: "YO: En la tele est\xE1n dando las noticias de la regi\xF3n. Qu\xE9 pereza, siempre est\xE1n hablando de pol\xEDtica...\r\n"
@@ -3935,6 +4052,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &2058184928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058184929}
+  - component: {fileID: 2058184930}
+  m_Layer: 0
+  m_Name: Punto_Escaleras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2058184929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058184928}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7, y: 2.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2058184930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058184928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45954deca6f8a14ab4c49d81e836f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuntoEntradaJugador
+  nombrePunto: Escaleras
 --- !u!1 &2117780594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4167,3 +4329,5 @@ SceneRoots:
   - {fileID: 696983075}
   - {fileID: 1131562746}
   - {fileID: 1849538481}
+  - {fileID: 2058184929}
+  - {fileID: 1143742764}

@@ -414,9 +414,11 @@ MonoBehaviour:
   escenaDestino: Casa_Abajo
   requiereLlave: 0
   textoSinLlave: "YO: La puerta est\xE1 cerrada. Deber\xEDa hablar con mam\xE1 primero."
-  nombrePuntoEntrada: 
+  nombrePuntoEntrada: PuertaEntrada
   requiereCartaParaEntrar: 1
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para viajar. Mam\xE1 me dijo que est\xE1 en mi cuarto, al lado del ordenador."
@@ -1164,6 +1166,8 @@ MonoBehaviour:
   nombrePuntoEntrada: 
   requiereCartaParaEntrar: 0
   textoSinCarta: "YO: No puedo volver a entrar todav\xEDa, primero debo coger la carta del buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para viajar. Mam\xE1 me dijo que est\xE1 en mi cuarto, al lado del ordenador."
@@ -2562,8 +2566,10 @@ MonoBehaviour:
   nombrePuntoEntrada: 
   requiereCartaParaEntrar: 0
   textoSinCarta: "YO: No debo volver a entrar todav\xEDa, primero tengo que revisar el buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
   requiereTarjetaBus: 1
-  nombreTarjetaBus: Tarjeta del Bus
+  nombreTarjetaBus: Tarjeta del bus
   textoSinTarjetaBus: "YO: Necesito la tarjeta del bus para subirme. Tendr\xE9 que buscarla en casa."
   esLaMadre: 0
   nombreObjetoAEntregarMadre: Llaves de la Casa
@@ -2780,6 +2786,8 @@ MonoBehaviour:
   nombrePuntoEntrada: 
   requiereCartaParaEntrar: 0
   textoSinCarta: "YO: No puedo volver a entrar todav\xEDa, primero debo coger la carta del buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para viajar. Mam\xE1 me dijo que est\xE1 en mi cuarto, al lado del ordenador."
@@ -3309,6 +3317,8 @@ MonoBehaviour:
   nombrePuntoEntrada: 
   requiereCartaParaEntrar: 0
   textoSinCarta: "YO: No puedo volver a entrar todav\xEDa, primero debo coger la carta del buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para viajar. Mam\xE1 me dijo que est\xE1 en mi cuarto, al lado del ordenador."
@@ -3460,6 +3470,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742277014}
   m_CullTransparentMesh: 1
+--- !u!1 &1767981003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767981005}
+  - component: {fileID: 1767981004}
+  m_Layer: 0
+  m_Name: Punto_SalidaCasa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1767981004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767981003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45954deca6f8a14ab4c49d81e836f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuntoEntradaJugador
+  nombrePunto: SalidaCasa
+--- !u!4 &1767981005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767981003}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5, y: 1.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771564235
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,6 +4041,8 @@ MonoBehaviour:
   nombrePuntoEntrada: 
   requiereCartaParaEntrar: 0
   textoSinCarta: "YO: No puedo volver a entrar todav\xEDa, primero debo coger la carta del buz\xF3n."
+  requiereHablarConMadrePostCarta: 0
+  textoSinHablarConMadre: "YO: Deber\xEDa ir a ense\xF1arle la carta a Mam\xE1 antes de subir a mi habitaci\xF3n."
   requiereTarjetaBus: 0
   nombreTarjetaBus: Tarjeta del Bus
   textoSinTarjetaBus: "YO: Necesito la Tarjeta del Bus para viajar. Mam\xE1 me dijo que est\xE1 en mi cuarto, al lado del ordenador."
@@ -4093,3 +4150,4 @@ SceneRoots:
   - {fileID: 2112643303}
   - {fileID: 721491495}
   - {fileID: 317644948}
+  - {fileID: 1767981005}

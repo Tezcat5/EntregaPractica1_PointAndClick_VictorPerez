@@ -16,32 +16,47 @@ public class ObjetoInteractuable : MonoBehaviour
     [TextArea] public string textoSinLlave = "La puerta está cerrada. Debería hablar con Mamá primero.";
 
     [Header("Punto de Aparición al cambiar de escena")]
-    public string nombrePuntoEntrada = ""; // Identificador del punto donde aparecerá el jugador
+    public string nombrePuntoEntrada = "";
 
     [Header("Bloqueo Puerta Exterior (Requiere Carta)")]
     public bool requiereCartaParaEntrar = false;
-    [TextArea] public string textoSinCarta = "YO: No debo volver a entrar todavía, primero tengo que revisar el buzón.";
+    [TextArea] public string textoSinCarta = "YO: Antes debo revisar el buzón.";
+
+    [Header("Bloqueo Escaleras / Cama (Requiere Hablar con Mamá)")]
+    public bool requiereHablarConMadrePostCarta = false;
+    [TextArea] public string textoSinHablarConMadre = "YO: Primero debería enseñarle la carta a Mamá.";
+
+    [Header("Bloqueo Puerta Campeón (Requiere Hablar con Guardia)")]
+    public bool requiereHablarConGuardia = false;
+    [TextArea] public string textoSinHablarConGuardia = "YO: El guardia de la puerta me bloquea el paso. Debería hablar con él.";
 
     [Header("Bloqueo Parada de Bus (Requiere Tarjeta Bus)")]
     public bool requiereTarjetaBus = false;
     public string nombreTarjetaBus = "Tarjeta del Bus";
-    [TextArea] public string textoSinTarjetaBus = "YO: Necesito la Tarjeta del Bus para subir al autobús. Tendré que buscarla en casa.";
+    [TextArea] public string textoSinTarjetaBus = "YO: Necesito la Tarjeta del Bus para subir.";
 
     [Header("Lógica de la Madre")]
     public bool esLaMadre = false;
     public string nombreObjetoAEntregarMadre = "Llaves de la Casa";
-    private static bool tieneLlaveDeCasa = false; // Compartido entre escenas
-    private static bool madreSabeDeLaCarta = false; // Estado para el nuevo diálogo
 
-    [TextArea] public string textoMadreDespuesDeCarta = "MAMÁ: ¡A ver qué pone en la carta!... ¡Ooh, se ve que debes ir a Monlau para enfrentarte al campeón Pokémon! Pues muchísima suerte cariño. Recuerda pillar la tarjeta del bus que está en tu cuarto, al lado del ordenador.";
-    [TextArea] public string textoMadreRecordatorioTarjeta = "MAMÁ: Recuerda coger la tarjeta del bus de tu habitación antes de marcharte.";
+    [Header("Lógica del Guardia de Monlau")]
+    public bool esElGuardia = false;
+    [TextArea] public string textoGuardiaAutorizado = "GUARDIA: Ya te he registrado. Puedes pasar a la Sala del Campeón.";
 
-    [Header("Lógica del Buzón / Cofres / Objetos (Entrega Objeto)")]
+    // VARIABLES DE ESTADO (ESTÁTICAS)
+    public static bool tieneLlaveDeCasa = false;
+    public static bool cartaYaRecogida = false;
+    public static bool madreSabeDeLaCarta = false;
+    public static bool guardiaPermitePaso = false;
+
+    [TextArea] public string textoMadreDespuesDeCarta = "MAMÁ: ¡A ver!... ¡Ooh, debes ir a Monlau a enfrentarte al campeón! ¡Qué suerte! Muchísima suerte, cariño. Coge la tarjeta del bus de tu cuarto, está en el ordenador.";
+    [TextArea] public string textoMadreRecordatorioTarjeta = "MAMÁ: ¡Muchísima suerte en tu viaje, cariño! Recuerda coger la tarjeta del bus que está al lado del ordenador en tu cuarto.";
+
+    [Header("Lógica del Buzón / Cama / Cofres (Entrega Objeto)")]
     public bool entregaObjetoAlInteractuar = false;
     public string nombreObjetoAEntregar = "Carta de Monlau";
-    private static bool cartaYaRecogida = false; // Compartido entre escenas
     private bool objetoYaEntregado = false;
-    [TextArea] public string textoYaEntregado = "El buzón está vacío. Ya cogí la carta.";
+    [TextArea] public string textoYaEntregado = "Ya cogí el objeto, no queda nada más.";
 
     [Header("Objeto con dos estados (opcional)")]
     public GameObject objetoEstadoAlternativo;
@@ -49,22 +64,30 @@ public class ObjetoInteractuable : MonoBehaviour
     [TextArea] public string textoMirarAlternativo = "";
     [TextArea] public string textoInteractuarAlternativo = "";
 
-    // Variable estática para recordar por qué punto entramos en la nueva escena
+    // Variable estática compartida entre escenas para el punto de aparición
     public static string puntoEntradaDestino = "";
+
+    // Método para reiniciar el progreso al iniciar la prueba
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void ResetearEstadoAlEmpezar()
+    {
+        tieneLlaveDeCasa = false;
+        cartaYaRecogida = false;
+        madreSabeDeLaCarta = false;
+        guardiaPermitePaso = false;
+        puntoEntradaDestino = "";
+        Debug.Log("🔄 Progreso de la partida reiniciado para la prueba.");
+    }
 
     public void Interactuar(string accion)
     {
-        Debug.Log(
-            "🔴 Interactuar llamado en " + nombreObjeto +
-            ". Acción recibida: " + accion
-        );
+        Debug.Log("🔴 Interactuar llamado en " + nombreObjeto + ". Acción recibida: " + accion);
 
         switch (accion)
         {
             case "MIRAR":
                 MostrarTexto(
-                    estadoAlternativoActivo &&
-                    !string.IsNullOrEmpty(textoMirarAlternativo)
+                    estadoAlternativoActivo && !string.IsNullOrEmpty(textoMirarAlternativo)
                     ? textoMirarAlternativo
                     : textoMirar
                 );
@@ -98,6 +121,18 @@ public class ObjetoInteractuable : MonoBehaviour
                         MostrarTexto("MAMÁ: Recuerda mirar el buzón fuera antes de irte.");
                     }
                 }
+                else if (esElGuardia)
+                {
+                    if (!guardiaPermitePaso)
+                    {
+                        guardiaPermitePaso = true;
+                        MostrarTexto(textoHablar); // Mensaje de registro/bienvenida
+                    }
+                    else
+                    {
+                        MostrarTexto(textoGuardiaAutorizado); // Recordatorio de que puedes pasar
+                    }
+                }
                 else
                 {
                     MostrarTexto(textoHablar);
@@ -105,9 +140,15 @@ public class ObjetoInteractuable : MonoBehaviour
                 break;
 
             case "INTERACTUAR":
-                // 1. Lógica del Buzón / Cofres
+                // 1. Recoger objetos (Cama, Buzón, etc.)
                 if (entregaObjetoAlInteractuar)
                 {
+                    if (requiereHablarConMadrePostCarta && (!cartaYaRecogida || !madreSabeDeLaCarta))
+                    {
+                        MostrarTexto(textoInteractuar);
+                        return;
+                    }
+
                     if (!cartaYaRecogida && nombreObjetoAEntregar == "Carta de Monlau")
                     {
                         cartaYaRecogida = true;
@@ -128,7 +169,7 @@ public class ObjetoInteractuable : MonoBehaviour
                             Inventario.Instance.AgregarObjeto(nombreObjetoAEntregar);
                         }
 
-                        MostrarTexto(textoInteractuar);
+                        MostrarTexto("YO: ¡Aquí estaba la Tarjeta del Bus! Me la guardo en la mochila.");
                     }
                     else
                     {
@@ -137,7 +178,32 @@ public class ObjetoInteractuable : MonoBehaviour
                     return;
                 }
 
-                // 2. Comprobación Parada de Autobús
+                // =======================================================
+                // COMPROBACIONES Y BLOQUEOS PARA CAMBIO DE ESCENA
+                // =======================================================
+
+                // A. Bloqueo Puerta Sala del Campeón (Exige hablar con el guardia primero)
+                if (requiereHablarConGuardia && !guardiaPermitePaso)
+                {
+                    MostrarTexto(textoSinHablarConGuardia);
+                    return;
+                }
+
+                // B. Bloqueo Escaleras Habitación
+                if (requiereHablarConMadrePostCarta && (!cartaYaRecogida || !madreSabeDeLaCarta))
+                {
+                    MostrarTexto(textoSinHablarConMadre);
+                    return;
+                }
+
+                // C. Bloqueo Puerta Entrada desde la Calle
+                if (requiereCartaParaEntrar && !cartaYaRecogida)
+                {
+                    MostrarTexto(textoSinCarta);
+                    return;
+                }
+
+                // D. Bloqueo Autobús
                 if (requiereTarjetaBus)
                 {
                     bool tieneTarjeta = Inventario.Instance != null && Inventario.Instance.TieneObjeto(nombreTarjetaBus);
@@ -149,41 +215,31 @@ public class ObjetoInteractuable : MonoBehaviour
                     }
                 }
 
-                // 3. Puerta exterior que exige coger la carta para volver a entrar
-                if (requiereCartaParaEntrar && !cartaYaRecogida)
-                {
-                    MostrarTexto(textoSinCarta);
-                    return;
-                }
-
-                // 4. Puerta interior que exige llave
+                // E. Bloqueo Puerta Salida de Casa
                 if (requiereLlave && !tieneLlaveDeCasa)
                 {
                     MostrarTexto(textoSinLlave);
                     return;
                 }
 
-                // 5. Cambio de escena si pasa las comprobaciones
+                // =======================================================
+                // CAMBIO DE ESCENA
+                // =======================================================
                 if (!string.IsNullOrEmpty(escenaDestino))
                 {
-                    // Guardamos el punto por el que entraremos a la nueva escena
                     puntoEntradaDestino = nombrePuntoEntrada;
                     SceneManager.LoadScene(escenaDestino);
                     return;
                 }
 
-                // 6. Estados alternativos
+                // Lógica de estados alternativos
                 if (objetoEstadoAlternativo != null)
                 {
                     estadoAlternativoActivo = !estadoAlternativoActivo;
-
-                    objetoEstadoAlternativo.SetActive(
-                        estadoAlternativoActivo
-                    );
+                    objetoEstadoAlternativo.SetActive(estadoAlternativoActivo);
 
                     MostrarTexto(
-                        estadoAlternativoActivo &&
-                        !string.IsNullOrEmpty(textoInteractuarAlternativo)
+                        estadoAlternativoActivo && !string.IsNullOrEmpty(textoInteractuarAlternativo)
                         ? textoInteractuarAlternativo
                         : textoInteractuar
                     );
@@ -204,9 +260,7 @@ public class ObjetoInteractuable : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning(
-                "No se encuentra SistemaDialogo en la escena."
-            );
+            Debug.LogWarning("No se encuentra SistemaDialogo en la escena.");
         }
     }
 }
